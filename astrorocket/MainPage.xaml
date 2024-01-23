@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="astrorocket.MainPage"
+             BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <ListView ItemsSource="{Binding Missions}" BackgroundColor="{StaticResource Secondary}" ItemTapped="ListView_ItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image 
+                                    Grid.RowSpan="2"
+                                    Source="rocket.png"
+                                    Aspect="AspectFill"
+                                    HeightRequest="35"
+                                    WidthRequest="35" />
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="{Binding mission_name}"
+                                    FontAttributes="Bold" />
+                                <Label 
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text= "{Binding launch_year}"
+                                    FontAttributes="Italic"
+                                    VerticalOptions="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

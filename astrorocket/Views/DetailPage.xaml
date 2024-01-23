@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="astrorocket.Views.DetailPage"
+             Title="Detalle de la misión">
+
+    <VerticalStackLayout Padding="20">
+        <!-- Muestra el nombre de la misión -->
+        <Label Text="{Binding mission_name}" 
+            FontSize="Medium"
+            FontAttributes="Bold" />
+
+        <!-- Muestra el año de lanzamiento -->
+        <Label Text="{Binding launch_year}"
+            FontSize="Small" />
+
+        <!-- Si la misión tiene un icono o imagen, puedes mostrarlo aquí -->
+        <Image Source="{Binding Icon}" 
+            Aspect="AspectFit"
+            HeightRequest="100" />
+            
+            
+    </VerticalStackLayout>
+</ContentPage>
