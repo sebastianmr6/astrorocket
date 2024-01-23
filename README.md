@@ -6,7 +6,7 @@ This is a simple App that allows you list all SpaceX's rocket mision and see its
 
 ## Why this App?
 
-Esta app es creada para mostrar mis habilidades con .Net y para enseñar a los estudiantes del semillero de "Sistemas de Inforamción en Salud de la Universidad de Antioquia".
+This app was created to showcase my skills with .Net and to teach students from the Sistemas de Información en Salud group at the University of Antioquia.
 
 ## Resources
 
